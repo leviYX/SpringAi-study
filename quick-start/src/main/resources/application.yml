@@ -1,0 +1,7 @@
+spring:
+  ai:
+    deepseek:
+      api-key: sk-268ec69586c049aeb1cb0d5c3edd0b63
+      chat:
+        options:
+          model: deepseek-chat
