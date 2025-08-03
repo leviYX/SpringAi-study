@@ -10,3 +10,6 @@ spring:
       chat:
         options:
           model: deepseek-chat
+  threads:
+    virtual:
+      enabled: true

@@ -38,6 +38,7 @@ public class ChatController {
         String platform = dynamicModelOptionReq.platform();
         String model = dynamicModelOptionReq.model();
         Double temperature = dynamicModelOptionReq.temperature();
+        System.err.println(Thread.currentThread());
 
         ChatModel chatModel = Objects.requireNonNull(platforms.get(platform),"模型平台异常，请检查参数");
         var chatClient = ChatClient.builder(chatModel).defaultOptions(ChatOptions.builder().model(model).temperature(temperature).build()).build();
