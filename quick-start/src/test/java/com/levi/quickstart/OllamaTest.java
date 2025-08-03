@@ -2,9 +2,16 @@ package com.levi.quickstart;
 
 
 import org.junit.jupiter.api.Test;
+import org.springframework.ai.chat.messages.UserMessage;
+import org.springframework.ai.chat.model.ChatResponse;
+import org.springframework.ai.chat.prompt.Prompt;
+import org.springframework.ai.content.Media;
 import org.springframework.ai.ollama.OllamaChatModel;
+import org.springframework.ai.ollama.api.OllamaOptions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.util.MimeTypeUtils;
 import reactor.core.publisher.Flux;
 
 @SpringBootTest
@@ -32,14 +39,35 @@ public class OllamaTest {
     }
 
     /**
-     * 0.9之前的ollama的stream有bug，0.9包括之后的没有了
+     * 0.9之前的ollama的stream是不支持的，0.9包括之后的支持了
      * springai的1.0.0的stream+tools有bug,未来的版本会修复这个问题。目前还是1.0.0
+     * https://github.com/spring-projects/spring-ai/issues/3369
      */
     @Test
     public void testOllamaStream(@Autowired OllamaChatModel chatModel) {
         Flux<String> stream = chatModel.stream("你好，你是谁?/no_think");
         stream.subscribe(System.out::println);
         stream.blockLast();
+    }
+
+    @Test
+    public void testMultimodal(@Autowired OllamaChatModel chatModel) {
+
+        var imageResource = new ClassPathResource("images/kobe.png");
+        var options = OllamaOptions.builder()
+                .model("huihui_ai/deepseek-r1-abliterated:14b") // 这里不指定就会走我们yml配置文件里面ollama下面配置的模型
+                .build();
+        var media = new Media(MimeTypeUtils.IMAGE_PNG, imageResource);
+        ChatResponse chatResponse = chatModel.call(
+                new Prompt(
+                        UserMessage.builder()
+                                .media(media)
+                                .text("详细描述一下该图片")
+                                .build(),
+                        options
+                )
+        );
+        System.out.println("图片的描述为:" + chatResponse.getResult().getOutput().getText());
     }
 
 }

@@ -14,13 +14,24 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$PROJECT_DIR$/../../../../../tools/maven/apache-maven-3.9.6/repo/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
+          <entry name="$PROJECT_DIR$/../../../../../tools/maven/apache-maven-3.9.6/repo/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
         </processorPath>
         <module name="quick-start" />
+      </profile>
+      <profile name="Annotation profile for chat-client" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$PROJECT_DIR$/../../../../../tools/maven/apache-maven-3.9.6/repo/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
+        </processorPath>
+        <module name="chat-client" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="chat-client" options="-parameters" />
       <module name="quick-start" options="-parameters" />
       <module name="springAi-application" options="-parameters" />
     </option>
