@@ -15,6 +15,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/quick-start/pom.xml" />
         <option value="$PROJECT_DIR$/chat-client/pom.xml" />
+        <option value="$PROJECT_DIR$/prompt/pom.xml" />
       </list>
     </option>
   </component>
