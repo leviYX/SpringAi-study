@@ -18,6 +18,8 @@
         <module>quick-start</module>
         <module>chat-client</module>
         <module>prompt</module>
+        <module>advisor</module>
+        <module>common</module>
     </modules>
 
 

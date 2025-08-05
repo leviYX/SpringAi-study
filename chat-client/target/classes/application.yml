@@ -1,0 +1,15 @@
+spring:
+  ai:
+    ollama:
+      base-url: http://localhost:11434 # 这个你本地部署就是默认的，可以不加。如果部署到线上环境就需要改一下不然访问不到.而且本机部署，不需要apikey，云上的才需要那些限制权限，计费啥的
+      chat:
+        options:
+          model: gemma3
+    deepseek:
+      api-key: sk-268ec69586c049aeb1cb0d5c3edd0b63
+      chat:
+        options:
+          model: deepseek-chat
+  threads:
+    virtual:
+      enabled: true

@@ -1,5 +1,6 @@
 package com.levi.prompt;
 
+import com.levi.springai.utils.PromptUtil;
 import org.junit.jupiter.api.Test;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,7 +36,7 @@ public class TestPrompt {
         var chatClient = chatClientBuilder.defaultSystem(defaultSystemPrompt).build();
         var content = chatClient.prompt()
                 // .system() 可以单独为这次对话设置，上面那个defaultSystem是全局生效的
-                .user(buildNoThinkPrompt("翻译一下 give me a break"))
+                .user(PromptUtil.buildNoThinkPrompt("翻译一下 give me a break"))
                 .call()
                 .content();
         System.out.println(content);
@@ -65,13 +66,9 @@ public class TestPrompt {
         var chatClient = chatClientBuilder.defaultSystem(defaultSystemPrompt).build();
         var content = chatClient.prompt()
                 .system(param -> param.param("name", "levi").param("age", "20").param("sex", "male"))
-                .user(buildNoThinkPrompt("你好，你知道我是谁吗"))
+                .user(PromptUtil.buildNoThinkPrompt("你好，你知道我是谁吗"))
                 .call()
                 .content();
         System.out.println(content);
-    }
-
-    private String buildNoThinkPrompt(String prompt) {
-        return prompt + "/no_think";
     }
 }
