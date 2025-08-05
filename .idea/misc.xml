@@ -18,6 +18,7 @@
         <option value="$PROJECT_DIR$/prompt/pom.xml" />
         <option value="$PROJECT_DIR$/advisor/pom.xml" />
         <option value="$PROJECT_DIR$/common/pom.xml" />
+        <option value="$PROJECT_DIR$/chat-memory/pom.xml" />
       </list>
     </option>
   </component>

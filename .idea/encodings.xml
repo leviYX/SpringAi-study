@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/advisor/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chat-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chat-memory/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/prompt/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/quick-start/src/main/java" charset="UTF-8" />
