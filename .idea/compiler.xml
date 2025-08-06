@@ -14,11 +14,12 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$PROJECT_DIR$/../../../../../tools/maven/apache-maven-3.9.6/repo/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
+          <entry name="$PROJECT_DIR$/../../../../../tools/maven/apache-maven-3.9.6/repo/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
         </processorPath>
-        <module name="chat-client" />
         <module name="advisor" />
-        <module name="quick-start" />
         <module name="common" />
+        <module name="chat-client" />
+        <module name="quick-start" />
         <module name="prompt" />
         <module name="chat-memory" />
       </profile>
@@ -33,6 +34,7 @@
       <module name="prompt" options="-parameters" />
       <module name="quick-start" options="-parameters" />
       <module name="springAi-application" options="-parameters" />
+      <module name="structured-output" options="-parameters" />
     </option>
   </component>
 </project>

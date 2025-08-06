@@ -21,8 +21,8 @@
         <module>advisor</module>
         <module>common</module>
         <module>chat-memory</module>
+        <module>structured-output</module>
     </modules>
-
 
     <properties>
         <java.version>21</java.version>
