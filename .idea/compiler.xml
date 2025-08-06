@@ -23,6 +23,15 @@
         <module name="prompt" />
         <module name="chat-memory" />
       </profile>
+      <profile name="Annotation profile for structured-output" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$PROJECT_DIR$/../../../../../tools/maven/apache-maven-3.9.6/repo/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
+        </processorPath>
+        <module name="structured-output" />
+      </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
