@@ -1,13 +1,37 @@
 spring:
   ai:
     ollama:
-      base-url: http://localhost:11434 # 这个你本地部署就是默认的，可以不加。如果部署到线上环境就需要改一下不然访问不到.而且本机部署，不需要apikey，云上的才需要那些限制权限，计费啥的
+      base-url: http://localhost:11434
       chat:
         options:
           model: qwen3:4b
+    chat:
+      memory:
+        repository:
+          jdbc:
+            initialize-schema: always # Always initialize
+            schema: classpath:/sql/chat_memory_schema.sql
   threads:
     virtual:
       enabled: true
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springai?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+    hikari:
+      connection-timeout: 15000
+      validation-timeout: 5000
+      # show variables like '%timeout%' idle-timeout max-lifetime 不能大于数据库中的 interactive_timeout(10)或wait_timeout(240)
+      idle-timeout: 240000
+      max-lifetime: 240000
+      login-timeout: 5
+      maximum-pool-size: 50
+      minimum-idle: 10
+      read-only: false
+      connection-test-query: SELECT 1
+
 logging:
   level:
     org:
@@ -16,4 +40,5 @@ logging:
           chat:
             client:
               advisor: DEBUG
+
 

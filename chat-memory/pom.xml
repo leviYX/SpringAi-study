@@ -30,6 +30,24 @@
             <artifactId>spring-ai-autoconfigure-model-chat-memory</artifactId>
         </dependency>
 
+        <!--jdbc记忆集-->
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-starter-model-chat-memory-repository-jdbc</artifactId>
+        </dependency>
+
+        <!--springboot 自动装配jdbc-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+
+        <!--底层驱动-->
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>com.levi.springai</groupId>
             <artifactId>common</artifactId>
