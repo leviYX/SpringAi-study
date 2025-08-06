@@ -14,21 +14,12 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$PROJECT_DIR$/../../../../../tools/maven/apache-maven-3.9.6/repo/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
-          <entry name="$PROJECT_DIR$/../../../../../tools/maven/apache-maven-3.9.6/repo/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
         </processorPath>
         <module name="chat-client" />
         <module name="advisor" />
         <module name="quick-start" />
         <module name="common" />
         <module name="prompt" />
-      </profile>
-      <profile name="Annotation profile for chat-memory" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$PROJECT_DIR$/../../../../../tools/maven/apache-maven-3.9.6/repo/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
-        </processorPath>
         <module name="chat-memory" />
       </profile>
     </annotationProcessing>
