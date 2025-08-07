@@ -23,6 +23,12 @@
             <artifactId>spring-ai-starter-model-ollama</artifactId>
         </dependency>
 
+        <!--chat memory,引入chat-memory自动装配器，才能在bean中注入ChatMemory的组件-->
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-autoconfigure-model-chat-memory</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>com.levi.springai</groupId>
             <artifactId>common</artifactId>

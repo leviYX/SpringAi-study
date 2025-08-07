@@ -20,6 +20,7 @@
         <option value="$PROJECT_DIR$/common/pom.xml" />
         <option value="$PROJECT_DIR$/chat-memory/pom.xml" />
         <option value="$PROJECT_DIR$/structured-output/pom.xml" />
+        <option value="$PROJECT_DIR$/tools-functioncall/pom.xml" />
       </list>
     </option>
   </component>

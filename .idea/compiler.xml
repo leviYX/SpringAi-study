@@ -16,6 +16,7 @@
           <entry name="$PROJECT_DIR$/../../../../../tools/maven/apache-maven-3.9.6/repo/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
           <entry name="$PROJECT_DIR$/../../../../../tools/maven/apache-maven-3.9.6/repo/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
         </processorPath>
+        <module name="structured-output" />
         <module name="advisor" />
         <module name="common" />
         <module name="chat-client" />
@@ -23,14 +24,14 @@
         <module name="prompt" />
         <module name="chat-memory" />
       </profile>
-      <profile name="Annotation profile for structured-output" enabled="true">
+      <profile name="Annotation profile for tools-functioncall" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$PROJECT_DIR$/../../../../../tools/maven/apache-maven-3.9.6/repo/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
         </processorPath>
-        <module name="structured-output" />
+        <module name="tools-functioncall" />
       </profile>
     </annotationProcessing>
   </component>
@@ -44,6 +45,7 @@
       <module name="quick-start" options="-parameters" />
       <module name="springAi-application" options="-parameters" />
       <module name="structured-output" options="-parameters" />
+      <module name="tools-functioncall" options="-parameters" />
     </option>
   </component>
 </project>
