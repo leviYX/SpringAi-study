@@ -22,6 +22,7 @@
         <module>common</module>
         <module>chat-memory</module>
         <module>structured-output</module>
+        <module>tools-functioncall</module>
     </modules>
 
     <properties>
