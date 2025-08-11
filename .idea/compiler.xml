@@ -18,20 +18,21 @@
         </processorPath>
         <module name="structured-output" />
         <module name="advisor" />
+        <module name="tools-functioncall" />
         <module name="common" />
         <module name="chat-client" />
         <module name="quick-start" />
         <module name="prompt" />
         <module name="chat-memory" />
       </profile>
-      <profile name="Annotation profile for tools-functioncall" enabled="true">
+      <profile name="Annotation profile for flight-booking" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$PROJECT_DIR$/../../../../../tools/maven/apache-maven-3.9.6/repo/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
         </processorPath>
-        <module name="tools-functioncall" />
+        <module name="flight-booking" />
       </profile>
     </annotationProcessing>
   </component>
@@ -41,6 +42,7 @@
       <module name="chat-client" options="-parameters" />
       <module name="chat-memory" options="-parameters" />
       <module name="common" options="-parameters" />
+      <module name="flight-booking" options="-parameters" />
       <module name="prompt" options="-parameters" />
       <module name="quick-start" options="-parameters" />
       <module name="springAi-application" options="-parameters" />

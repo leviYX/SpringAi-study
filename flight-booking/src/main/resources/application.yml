@@ -5,10 +5,12 @@ spring:
       chat:
         options:
           model: llama3.2:latest
+  data:
+
     redis:
       host: 127.0.0.1
       port: 6379
-      password: 123456          # 无密码留空
+      password: 123456
       database: 0
       timeout: 5s
       lettuce:

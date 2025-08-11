@@ -75,7 +75,7 @@ export default {
   setup() {
     const activities = ref([
       {
-        content: '⭐欢迎来到橘子航空✈！请问有什么可以帮您的?',
+        content: '⭐欢迎来到橘子商城✈！请问有什么可以帮您的?',
         timestamp: new Date().toLocaleDateString() + " " + new Date().toLocaleTimeString(),
         color: '#0bbd87',
       },
@@ -127,13 +127,18 @@ export default {
 
     const getBookings = () => {
       axios.get('http://localhost:8080/booking/list')
-          .then((response) => {
-            debugger;
-            tableData.value = response.data;
+          .then((res) => {
+            // 扁平化嵌套结构
+            tableData.value = res.data.map(item => ({
+              bookingNumber: item.booking.bookingNumber,
+              name: item.userName,
+              date: item.booking.date,
+              from: item.booking.from,
+              to: item.booking.to,
+              bookingStatus: item.booking.bookingStatus
+            }));
           })
-          .catch((error) => {
-            console.error(error);
-          });
+          .catch(console.error);
     };
 
     // Use onMounted to call getBookings when the component is mounted
