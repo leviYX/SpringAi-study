@@ -9,12 +9,16 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.levi.springai</groupId>
-    <artifactId>tools-functioncall</artifactId>
+    <artifactId>flight-booking</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>tools-functioncall</name>
+    <name>flight-booking</name>
+    <description>flight-booking</description>
 
     <properties>
         <java.version>21</java.version>
+        <javafaker.version>1.0.2</javafaker.version>
+        <fastjson2.version>2.0.57</fastjson2.version>
+
     </properties>
     <dependencies>
         <!--ollama-->
@@ -31,9 +35,20 @@
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>${javafaker.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba.fastjson2</groupId>
+            <artifactId>fastjson2</artifactId>
+            <version>${fastjson2.version}</version>
+        </dependency>
         <dependency>
             <groupId>com.levi.springai</groupId>
             <artifactId>common</artifactId>

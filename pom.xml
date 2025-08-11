@@ -23,6 +23,7 @@
         <module>chat-memory</module>
         <module>structured-output</module>
         <module>tools-functioncall</module>
+        <module>flight-booking</module>
     </modules>
 
     <properties>

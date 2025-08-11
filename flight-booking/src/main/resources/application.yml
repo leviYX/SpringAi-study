@@ -1,0 +1,22 @@
+spring:
+  ai:
+    ollama:
+      base-url: http://localhost:11434 # 这个你本地部署就是默认的，可以不加。如果部署到线上环境就需要改一下不然访问不到.而且本机部署，不需要apikey，云上的才需要那些限制权限，计费啥的
+      chat:
+        options:
+          model: llama3.2:latest
+    redis:
+      host: 127.0.0.1
+      port: 6379
+      password: 123456          # 无密码留空
+      database: 0
+      timeout: 5s
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 0
+          max-wait: 1s
+  threads:
+    virtual:
+      enabled: true
