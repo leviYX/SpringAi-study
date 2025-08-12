@@ -29,7 +29,7 @@ public class SpringAiDemoApplication {
     }
 
 
-    @PostConstruct
+    // @PostConstruct
     public void init() {
         Faker faker = InstanceFactory.faker();
         var users = List.of(

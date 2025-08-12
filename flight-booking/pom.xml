@@ -49,6 +49,13 @@
             <artifactId>fastjson2</artifactId>
             <version>${fastjson2.version}</version>
         </dependency>
+
+<!--        &lt;!&ndash;既支持sse\也支持Stdio&ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.ai</groupId>-->
+<!--            <artifactId>spring-ai-starter-mcp-client-webflux</artifactId>-->
+<!--        </dependency>-->
+
         <dependency>
             <groupId>com.levi.springai</groupId>
             <artifactId>common</artifactId>
